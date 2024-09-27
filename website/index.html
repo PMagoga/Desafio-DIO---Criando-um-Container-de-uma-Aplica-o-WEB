@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio DIO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <body>
+    <header>
+      <h1>Desafio de Projeto DIO / Pizzaria Paradise</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Menu</a></li>
+        <li><a href="index.html">About Us</a></li>
+        <li><a href="index.html">Locations</a></li>
+        <li><a href="index.html">Contact</a></li>
+        <li><a href="credito.html">Créditos das Fotos</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section class="pizza-showcase">
+        <div class="pizza-card">
+          <img src="images/pizza1.jpg" alt="Pizza 1" class="pizza-image" width="250" height="200">
+          <div class="pizza-info">
+            <h2 class="pizza-name">Pizza 1</h2>
+            <p class="pizza-description">Pizza italiana clássica com molho de tomate, mussarela fresca e folhas de manjericão.</p>
+            <a href="order?pizza=margherita" class="order-button">Peça Agora</a>
+          </div>
+        </div>
+        <div class="pizza-card">
+          <img src="images/pizza4.jpg" alt="Pizza 2" class="pizza-image" width="250" height="200">
+          <div class="pizza-info">
+            <h2 class="pizza-name">Pepperoni</h2>
+            <p class="pizza-description">O favorito da América! Carregado com fatias de calabresa e queijo derretido.</p>
+            <a href="order?pizza=pepperoni" class="order-button">Peça Agora</a>
+          </div>
+        </div>
+        <div class="pizza-card">
+          <img src="images/pizza3.jpg" alt="Pizza vegetariana colorida com várias coberturas" class="pizza-image" width="250" height="200">
+          <div class="pizza-info">
+            <h2 class="pizza-name">Vegetariana Supreme</h2>
+            <p class="pizza-description">Uma mistura de vegetais frescos em uma crosta crocante com nosso molho exclusivo.</p>
+            <a href="order?pizza=veggie-supreme" class="order-button">Peça Agora</a>
+          </div>
+        </div>
+        <div class="pizza-card">
+          <img src="images/pizza4.jpg" alt="Pizza 4" class="pizza-image" width="250" height="200">
+          <div class="pizza-info">
+            <h2 class="pizza-name">Pizza 4</h2>
+            <p class="pizza-description">Molho barbecue picante, frango grelhado, cebola roxa e coentro.</p>
+            <a href="order?pizza=bbq-chicken" class="order-button">Peça Agora</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const orderButtons = document.querySelectorAll('.order-button');
+        orderButtons.forEach(button => {
+          button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const pizzaName = this.closest('.pizza-card').querySelector('.pizza-name').textContent;
+            alert(`Thank you for ordering the ${pizzaName} pizza! Your slice of heaven is on its way.`);
+          });
+        });
+      });
+    </script>
+  </body>
+  
+</body>
+</html>
+
+
+</head>
+
+</html>
